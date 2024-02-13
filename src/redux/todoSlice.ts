@@ -7,20 +7,26 @@ interface ItemType {
   checked: boolean;
 }
 
-const initialState: ItemType[] = [];
+interface StateItems {
+  items: ItemType[];
+}
+
+const initialState: StateItems = {
+  items: [],
+};
 
 const todoSlice = createSlice({
   name: "items",
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<ItemType>) => {
-      state.push(action.payload);
+      state.items.push(action.payload);
     },
     deleteTodo: (state, action: PayloadAction<number>) => {
-      return state.filter((todo) => todo.id !== action.payload);
+      state.items = state.items.filter((todo) => todo.id !== action.payload);
     },
     changeTodo: (state, action: PayloadAction<ItemType>) => {
-      return state.map((todo) =>
+      state.items = state.items.map((todo) =>
         todo.id === action.payload.id
           ? { ...todo, checked: action.payload.checked, id: Date.now() }
           : todo,
