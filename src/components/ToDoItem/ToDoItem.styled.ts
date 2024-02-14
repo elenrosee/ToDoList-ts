@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Breakpoints, MQ } from "../../common";
 
 export const Item = styled.li`
   width: calc(100vw - 20px);
