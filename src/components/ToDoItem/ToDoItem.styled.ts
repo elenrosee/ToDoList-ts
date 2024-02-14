@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { Breakpoints, MQ } from "../../common";
 
 export const Item = styled.li`
-  width: 490px;
-  height: 50px;
+  width: calc(100vw - 20px);
+  min-width: 280px;
+  min-height: 50px;
+
   list-style: none;
 
   display: flex;
@@ -13,12 +16,14 @@ export const Item = styled.li`
   margin-left: 10px;
   margin-right: 10px;
 
-  padding: 20px;
+  padding: 15px;
 
   border-radius: 15px;
   background-color: #f0f8ff;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 
   cursor: grab;
 `;
@@ -30,6 +35,8 @@ export const DeleteBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-left: 10px;
 
   & svg {
     width: 25px;
@@ -44,6 +51,8 @@ export const BtnChecked = styled.button`
 
   width: 25px;
   height: 25px;
+
+  margin-right: 10px;
 
   border-radius: 8px;
   border: 1.5px solid gray;
@@ -63,7 +72,7 @@ export const BtnChecked = styled.button`
 export const ToDoName = styled.h4`
   border: none;
   outline: none;
-  width: 350px;
+  width: calc(100% - 80px);
   color: rgba(36, 36, 36, 1);
 
   &.checked {

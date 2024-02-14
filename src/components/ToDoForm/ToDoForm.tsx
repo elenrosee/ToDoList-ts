@@ -35,7 +35,6 @@ export const ToDoForm = () => {
           name="name"
           value={name}
           onChange={handleChange}
-          maxLength={25}
           autoComplete="off"
           placeholder="Add new task to do"
           required

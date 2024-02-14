@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Breakpoints, MQ } from "./common";
 
 export const Container = styled.div`
   display: flex;
@@ -8,7 +9,11 @@ export const Container = styled.div`
 
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 
   width: max-content;
+
+  ${MQ(Breakpoints.md)} {
+    margin-top: 40px;
+  }
 `;
