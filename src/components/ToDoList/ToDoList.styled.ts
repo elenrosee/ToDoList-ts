@@ -29,8 +29,10 @@ export const Title = styled.h3`
 export const ItemBoard = styled.div`
   border: solid 2px #003d74;
   border-radius: 20px;
-  overflow: hidden;
 
+  overflow-y: scroll;
+
+  padding: 10px;
   margin-bottom: 10px;
 
   width: calc(100vw - 20px);

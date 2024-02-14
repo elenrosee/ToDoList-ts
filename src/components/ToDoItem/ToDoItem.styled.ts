@@ -11,11 +11,10 @@ export const Item = styled.li`
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-
   padding: 15px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   border-radius: 15px;
   background-color: #f0f8ff;
