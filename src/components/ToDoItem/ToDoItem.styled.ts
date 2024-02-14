@@ -23,8 +23,6 @@ export const Item = styled.li`
     0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14),
     0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-
-  cursor: grab;
 `;
 
 export const DeleteBtn = styled.button`
@@ -73,6 +71,8 @@ export const ToDoName = styled.h4`
   outline: none;
   width: calc(100% - 80px);
   color: rgba(36, 36, 36, 1);
+
+  word-wrap: break-word;
 
   &.checked {
     color: rgba(36, 36, 36, 0.5);
